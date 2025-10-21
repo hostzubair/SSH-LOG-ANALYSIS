@@ -56,6 +56,21 @@ Run `event_type="Failed SSH Login"
 
 ![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/f9bdc83380c703213b71172356d633915d029f0d/Image/Screenshot%20(78).png)
 
+# Task 3: Detect Multiple Failed Authentication Attempts (Brute Force)
+
+<summary><b>Search for multiple failed attempts in logs:</b></summary> 
+
+Run `event_type="Multiple Failed Authentication Attempts"
+| stats count by id.orig_h, id.resp_h`, 
+
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/f9bdc83380c703213b71172356d633915d029f0d/Image/Screenshot%20(79).png)
+
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/f9bdc83380c703213b71172356d633915d029f0d/Image/Screenshot%20(80).png)
+
+
+
+
+
 
 
 
