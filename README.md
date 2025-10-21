@@ -3,21 +3,21 @@
 
 The goal of this project is to analyze SSH authentication logs to detect:
 
-Successful logins (who connected, from where)   
-Failed login attempts (possible brute-force or password spraying)  
-Multiple failed authentication attempts (indicators of brute-force)   
-Connections without authentication (potential scanning or incomplete sessions)
+1. Successful logins (who connected, from where)   
+2. Failed login attempts (possible brute-force or password spraying)  
+3. Multiple failed authentication attempts (indicators of brute-force)   
+4. Connections without authentication (potential scanning or incomplete sessions)
 
 # Preparation
 
 
-Log in to your Splunk instance (Enterprise or Free). 
-Go to Apps > Search & Reporting.  
-Click Add Data → Upload. 
-Select the provided ssh_log.json file and upload it.   
-Choose sourcetype = _json so Splunk automatically extracts fields.   
-Index it under a new index, e.g., ssh_logs.  
-Review and click on start searching  
+1. Log in to your Splunk instance (Enterprise or Free). 
+2. Go to Apps > Search & Reporting.  
+3. Click Add Data → Upload. 
+4. Select the provided ssh_log.json file and upload it.   
+5. Choose sourcetype = _json so Splunk automatically extracts fields.   
+6. Index it under a new index, e.g., ssh_logs.  
+7. Review and click on start searching  
 
 ![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/3255e068936e1f7346561213efa61d17d46e8f80/Image/Screenshot%20(74).png)
 
@@ -30,13 +30,13 @@ Review and click on start searching
 # Task 1: Ingest and Parse Logs
 
 
-Upload ssh_log.json into Splunk.   
-Ensure the following fields are extracted correctly:   
-event_type (Successful SSH Login, Failed SSH Login, Multiple Failed Authentication Attempts, Connection Without Authentication)    
-auth_success (true/false/null)    
-auth_attempts      
-id.orig_h (source IP)    
-id.resp_h (destination host)  
+1. Upload ssh_log.json into Splunk.   
+2. Ensure the following fields are extracted correctly:   
+3. event_type (Successful SSH Login, Failed SSH Login, Multiple Failed Authentication Attempts, Connection Without Authentication)    
+4. auth_success (true/false/null)    
+5. auth_attempts      
+6. id.orig_h (source IP)    
+7. id.resp_h (destination host)  
  
 
 <summary><b>Run a validation search:</b></summary> 
@@ -103,13 +103,13 @@ Run `event_type="Connection Without Authentication"
 
 # Conclusion
 
-Built dashboards to monitor SSH activity.
+1. Built dashboards to monitor SSH activity.
 
-Identified brute-force login attempts and suspicious access attempts.
+2. Identified brute-force login attempts and suspicious access attempts.
 
-Configured Splunk alerts for high-risk behavior.
+3. Configured Splunk alerts for high-risk behavior.
 
-Learned how to parse, search, visualize, and alert on SSH logs in Splunk.
+4. Learned how to parse, search, visualize, and alert on SSH logs in Splunk.
 
 
 
