@@ -67,6 +67,57 @@ Run `event_type="Multiple Failed Authentication Attempts"
 
 ![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/f9bdc83380c703213b71172356d633915d029f0d/Image/Screenshot%20(80).png)
 
+# Task 4: Track Successful Logins
+
+<summary><b>Search for multiple failed attempts in logs:</b></summary> 
+
+Run `event_type="Successful SSH Login"
+| stats count by id.orig_h, id.resp_h`
+
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/7753cf6537979face5cad270a2a857177dc42805/Image/Screenshot%20(81).png)
+
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/7753cf6537979face5cad270a2a857177dc42805/Image/Screenshot%20(86).png)
+
+# Task 5: Spot Suspicious Connections Without Authentication
+
+<summary><b>Search for unauthenticated SSH connections:</b></summary> 
+
+Run `event_type="Connection Without Authentication"
+| stats count by id.orig_h`
+
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/7753cf6537979face5cad270a2a857177dc42805/Image/Screenshot%20(82).png)
+
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/7753cf6537979face5cad270a2a857177dc42805/Image/Screenshot%20(83).png)
+
+
+<summary><b>Create a timechart visualization to monitor such events over time:</b></summary> 
+
+
+Run `event_type="Connection Without Authentication"
+| timechart count by id.orig_h`
+
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/7753cf6537979face5cad270a2a857177dc42805/Image/Screenshot%20(84).png)
+
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/7753cf6537979face5cad270a2a857177dc42805/Image/Screenshot%20(85).png)
+
+
+# Conclusion
+
+Built dashboards to monitor SSH activity.
+
+Identified brute-force login attempts and suspicious access attempts.
+
+Configured Splunk alerts for high-risk behavior.
+
+Learned how to parse, search, visualize, and alert on SSH logs in Splunk.
+
+
+
+
+
+
+
+
 
 
 
