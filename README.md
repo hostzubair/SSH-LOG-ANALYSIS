@@ -19,6 +19,12 @@ Choose sourcetype = _json so Splunk automatically extracts fields.
 Index it under a new index, e.g., ssh_logs.  
 Review and click on start searching  
 
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/3255e068936e1f7346561213efa61d17d46e8f80/Image/Screenshot%20(74).png)
+
+![image alt](
+
+
+
 # Step-by-Step Guide
 
 # Task 1: Ingest and Parse Logs
