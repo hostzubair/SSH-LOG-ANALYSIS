@@ -41,9 +41,20 @@ id.resp_h (destination host)
 
 <summary><b>Run a validation search:</b></summary> 
 
-
-
 Run `index=ssh_log | stats count by event_type`, 
+
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/f9bdc83380c703213b71172356d633915d029f0d/Image/Screenshot%20(76).png)
+
+# Task 2: Analyze Failed Login Attempts
+
+<summary><b>Identify all failed login attempts:</b></summary> 
+
+Run `event_type="Failed SSH Login"
+| stats count by id.orig_h`, 
+
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/f9bdc83380c703213b71172356d633915d029f0d/Image/Screenshot%20(77).png)
+
+![image alt](https://github.com/hostzubair/SSH-LOG-ANALYSIS/blob/f9bdc83380c703213b71172356d633915d029f0d/Image/Screenshot%20(78).png)
 
 
 
